@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './ButtonsBar/FeedbackOptions'
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions'
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 
@@ -30,7 +30,7 @@ class Feedback extends Component {
 
   calcPercent = () => {
     this.setState(prev => ({
-      percent: ~~(100 / (prev.good + prev.neutral + prev.bad) * prev.good * prev.neutral * 0.5)
+      percent: ~~(((prev.good + prev.neutral * .5) / prev.total) * 100)
     }))
   }
 
