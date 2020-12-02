@@ -1,0 +1,19 @@
+.button {
+  cursor: pointer;
+  border: solid 1px lightblue;
+  outline: none;
+  border-radius: 2px;
+  padding: 3px 10px;
+  transition: background-color 250ms, box-shadow 250ms;
+  font-weight: 400;
+}
+
+.button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.button:hover,
+button:focus {
+  background-color: rgb(173, 216, 230);
+  box-shadow: 1px 2px 2px rgba(173, 216, 230, 0.2);
+}
