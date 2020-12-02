@@ -30,7 +30,7 @@ class Feedback extends Component {
 
   calcPercent = () => {
     this.setState(prev => ({
-      percent: ~~(prev.good / prev.total * 100)
+      percent: ~~(100 / (prev.good + prev.neutral + prev.bad) * prev.good * prev.neutral * 0.5)
     }))
   }
 
